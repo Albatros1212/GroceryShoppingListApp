@@ -18,9 +18,7 @@ export const getItems = () => {
 
 export const addItem = title => {
   return dispatch => {
-    axios
-      .post(`${baseUrl}/tasks`, {title: title, status: false})
-      .then(response => {
+    axios.post(`${baseUrl}/tasks`, {title: title, status: false}).then(response => {
         dispatch(getItems());
       });
   };
@@ -36,9 +34,7 @@ export const removeItem = id => {
 
 export const editItem = (id, title, status) => {
   return dispatch => {
-    axios
-      .put(`${baseUrl}/task/${id}`, {title: title, status: status})
-      .then(response => {
+    axios.put(`${baseUrl}/task/${id}`, {title: title, status: status}).then(response => {
         dispatch(getItems());
       });
   };
