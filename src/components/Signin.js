@@ -19,7 +19,7 @@ class SignIn extends Component {
     render() {
     return (
         <View> 
-            <Text> Hello</Text>
+            
                 
                 </View> 
     )
